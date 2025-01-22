@@ -1,20 +1,53 @@
-import React from 'react';
-import Image from 'next/image';
-import riyaj from "../assets/bg.jpg"
+/* eslint-disable @next/next/no-img-element */
+import React from "react";
 export default function Landing() {
   return (
-    <div className='m-2'>
-      <div className="text-left py-4">
-       hello
-        
+    <div className=" ">
+      <div
+        className="h-screen bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/assets/bg3.jpg')",
+        }}
+      >
+        <div className="relative z-20 flex flex-col sm:flex-row items-center justify-between pt-56">
+          <div className="w-full sm:w-1/3 flex justify-center">
+            <img
+              src="assets/ok.JPG"
+              alt="RIYAJ cHAULAGAIN"
+              className="rounded-full border-8 border-white w-48 sm:w-64"
+            ></img>
+          </div>
+
+          <div className="w-full sm:w-2/3 mt-10 sm:mt-0 text-center sm:text-left">
+            <h1 className="text-4xl font-serif text-white font-bold">Riyaj Chaulagain</h1>
+            <p className="text-lg mt-3 p-6 mr-96 text-white font-bold">
+              Welcome to my space! Here, you’ll get a glimpse of my journey—my
+              passion for learning, the projects I’ve brought to life, and the
+              experiences that have shaped who I am. From designing innovative
+              solutions to tackling challenges head-on, this portfolio reflects
+              my dedication, creativity, and growth. Dive in, explore my work,
+              and discover the stories behind each project. Let’s create
+              something amazing together!
+            </p>
+
+            <div className="mt-8 mb-10 z-50">
+              <a
+                href="#contact"
+                className="px-6 py-3 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition duration-300"
+              >
+                CONTACT ME
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div className="text-right">
         {
           "Today, we are here to show our first step of using css. I used 'text-center' alignment to start my heading from the center of my page. And, I used 'text-right'alignment to start my first ltter of second paragraph from right side."
         }
       </div>
       <hr className="border-black p-4 m-8" />
-      <Image width={2000} height={200} src={riyaj} alt ="logo " className="rounded-full w-96 h-80 my-10" />
       <div className="pl-7">
         <ul className="list-disc list inside">
           <li className="text-green-600 my-2">Bishow</li>
