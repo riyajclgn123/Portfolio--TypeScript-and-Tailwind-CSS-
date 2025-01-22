@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-right font-sans text-white p-3">
-      <p>{"© 2024 September Riyaj Chaulagain"}</p>
+    <footer className="bg-blue-500 font-sans text-white flex justify-center py-3">
+      <p>{"© Created by Riyaj Chaulagain | September 2024"}</p>
     </footer>
   );
 }
