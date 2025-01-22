@@ -1,27 +1,24 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 export default function Navbar() {
   return (
     <>
-      <div className=" bg-slate-300 w-auto h-20 m-2" >
-        <div className="flex flex-row">
-          <Image width={80} height={10} src="/download.jpeg" alt ="logo" className="pl-4 h-24 pr-5 py-5"/>
-          <div className="basis-1/7 text-black font-bold text-2xl py-10 pr-10">Home</div>
-          <div className="basis-1/7 text-black font-bold text-2xl py-10 pr-10">
-          <Link href="/about">About</Link>
-          </div>
-          <div className="basis-1/7 text-black font-bold text-2xl py-10 pr-40">
-          <Link href="/help">Help</Link>
-          </div>
-          <div className="basis-2/5 text-black text-xl py-10 pr-10">
-               <div className="bg-white text-center">Search the data</div>
-          </div>
-          <div className=" py-10">
-            <button className="border border-black rounded-2xl font-bold pr-4 pl-4 flex flex-row-reverse">Profile</button>
-          </div>
-        </div>
+    <nav>
+      <div className="navbar flex items-center justify-between w-full bg-blue-700">
+       <div className="logo font-bold text-white text-3xl my-3 ml-5"><a href="#">Portfolio.</a></div>
+         <ul className="menu flex justify-center">
+          <li className="mx-9 text-white hover:text-black font-serif text-2xl"><a href="#home">Home</a></li>
+          <li className="mx-9 text-white hover:text-black font-serif text-2xl"><a href="#about">About</a></li>
+          <li className="mx-9 text-white hover:text-black font-serif text-2xl"><a href="#skills">Skills</a></li>
+          <li className="mx-9 text-white hover:text-black font-serif text-2xl"><a href="#services">Services</a></li>
+          <li className="mx-9 text-white hover:text-black font-serif text-2xl"><a href="#contact">Contact</a></li>
+         </ul>
+       <div className="flex items-end mr-7">
+        <a href="https://www.facebook.com/riyaj.chaulagain" target="_blank" className="text-white p-4 hover:text-black transition duration-200" ><FaFacebook size ={40} /></a>
+        <a href="https://www.linkedin.com/in/riyajchaulagain/" target="_blank" className="text-white p-4 hover:text-black transition duration-200" ><FaLinkedin size ={40} /></a>
+       </div>
       </div>
+    </nav> 
     </>
   );
 }

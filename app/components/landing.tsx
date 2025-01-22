@@ -5,9 +5,8 @@ export default function Landing() {
   return (
     <div className='m-2'>
       <div className="text-left py-4">
-        This is my first project using React and tailwind css. I am very happy
-        to learn with Anish Gyawali dai. Thanks for helping in every step of our
-        life.
+       hello
+        
       </div>
       <div className="text-right">
         {
