@@ -11,7 +11,7 @@ import {
 
 export default function Landing() {
   // Path to the file you want to allow users to download
-  const fileUrl = 'https://github.com/riyajclgn123/everest/blob/main/public/assets/cv.pdf'; // Make sure your CV is placed in the public folder
+  const fileUrl = '/assets/cv.pdf'; // Make sure your CV is placed in the public folder
 
   // Handle the download button
   const handleDownload = () => {
