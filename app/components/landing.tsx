@@ -1,9 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import React from "react";
+import {
+  FaJava,
+  FaJsSquare,
+  FaMicrosoft,
+  FaPython,
+  FaReact,
+} from "react-icons/fa";
+
 export default function Landing() {
+  // Path to the file you want to allow users to download
+  const fileUrl = 'https://github.com/riyajclgn123/everest/blob/main/public/assets/cv.pdf'; // Make sure your CV is placed in the public folder
+
+  // Handle the download button
+  const handleDownload = () => {
+    const link = document.createElement('a'); // Create a temporary link
+    link.href = fileUrl; // Set the file URL
+    link.download = fileUrl.split('/').pop(); // Set a default file name (e.g., cv.pdf)
+    document.body.appendChild(link); // Append the link to the DOM
+    link.click(); // Simulate a click to trigger download
+    document.body.removeChild(link); // Clean up by removing the link
+  };
+
   return (
     <div className=" ">
-      <div
+      <section
+        id="background"
         className="h-screen bg-cover bg-center"
         style={{
           backgroundImage: "url('/assets/bg3.jpg')",
@@ -19,7 +42,9 @@ export default function Landing() {
           </div>
 
           <div className="w-full sm:w-2/3 mt-10 sm:mt-0 text-center sm:text-left">
-            <h1 className="text-4xl font-serif text-white font-bold">Riyaj Chaulagain</h1>
+            <h1 className="text-4xl font-serif text-white font-bold">
+              Riyaj Chaulagain
+            </h1>
             <p className="text-lg mt-3 p-6 mr-96 text-white font-bold">
               Welcome to my space! Here, you’ll get a glimpse of my journey—my
               passion for learning, the projects I’ve brought to life, and the
@@ -40,53 +65,151 @@ export default function Landing() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="text-right">
-        {
-          "Today, we are here to show our first step of using css. I used 'text-center' alignment to start my heading from the center of my page. And, I used 'text-right'alignment to start my first ltter of second paragraph from right side."
-        }
-      </div>
-      <hr className="border-black p-4 m-8" />
-      <div className="pl-7">
-        <ul className="list-disc list inside">
-          <li className="text-green-600 my-2">Bishow</li>
-          <li className="text-violet-400 my-3">Sudhakar</li>
-          <li className="text-orange-500 my-5">FSujit</li>
-          <li className="text-blue-500 my-9">Riyaj</li>
-          <li my-12>Sagar</li>
-        </ul>
-      </div>
-      <div className="flex justify-center flex-col">
-        <button className="bg-yellow-400 w-64 rounded-2xl py-2 px-4 border border-gray-950 my-3">
-          I am a button
-        </button>
-        <button className="bg-pink-400 w-64 rounded-2xl py-2 px-4 border border-gray-950 my-3">
-          I am a hover button
-        </button>
-      </div>
-      <div className="border border-yellow-400 ">
-        Ma yesma kei lekhna jadai xu. yo mero border check garne aauta example
-        ho.
-      </div>
-      <div className="p-7 m-5 bg-green-600">
-        I am testing the margin and padding of this text. So, please check my
-        padding and margin so that I can do better in my futher projects. Love
-        to do this. Tesaile prayas mero jaari xa sathi bhai haru. Jindagi chhoto
-        xa so, yei ho time afno life ramro banaune.
-      </div>
+      <section
+        className="about flex justify-center object-contain text-bold"
+        id="about"
+      >
+        <div className="content">
+          <div className="title">
+            <span className="text-4xl flex justify-center mt-5 underline font-mono font-semibold">
+              About Me
+            </span>
+          </div>
+          <div className="about-details flex flex-wrap items-center justify-between">
+            <div className="left w-full sm:w-1/2 ">
+              <img
+                src="assets/ok.JPG"
+                alt=""
+                className="w-96 ml-56 mt-24 mb-24 h-auto rounded-lg mr-56"
+              />
+            </div>
+            <div className="right sm:w-1/2 bg-blue-400 rounded-lg p-32 ">
+              <div className="topic font-bold text-4xl object-contain flex justify-center mb-8 ">
+                Designing Is My Passion
+              </div>
+              <p className=" text-1xl text-white ">
+                Welcome to my space! Here, you’ll get a glimpse of my journey—my
+                passion for learning, the projects I’ve brought to life, and the
+                experiences that have shaped who I am. From designing innovative
+                solutions to tackling challenges head-on, this portfolio
+                reflects my dedication, creativity, and growth. Dive in, explore
+                my work, and discover the stories behind each project. Let’s
+                create something amazing together!
+              </p>
+              <div className="button text-black flex justify-center mt-16  ">
+                <button onClick={handleDownload}>
+                  <a
+                    href="#"
+                    className="border-black bg-blue-600 p-4 rounded-lg "
+                  >
+                    Download CV
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="grid , grid-cols-2 p-6 m-5">
-        <div className="bg-pink-500 p-4 m-4">this is 1st grid.</div>
-        <div className="bg-yellow-400 p-4 m-4"> this is 2nd grid</div>
-      </div>
-      <div className="text-pink-300 text-2xl font-serif font-bold p-2">
-        I just wanna check the font size, color and boldness of the text. all is
-        well.
-      </div>
-      <div className="bg-blue-500 shadow-blue-500/50 shadow-2xl p-4 m-20">
-        Yaha border ko shadow dekhane try gardai xu.
-      </div>
+      <section id="skills" className=""></section>
+
+      <section className="relative w-full h-24 bg-blue-300 mb-5 flex justify-center">
+        <div className="flex items-center space-x-40 animate-scroll-left-right">
+          <div className="relative text-black transform -rotate-90 origin-left text-center p-5 ml-80 bg-white">SKILLS</div>
+
+          <div className="">
+            <i className="fab fa-java text-4xl ">
+              <FaJava size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-python text-4xl ">
+              <FaPython size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-js-square text-4xl ">
+              <FaJsSquare size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-microsoft text-4xl ">
+              <FaMicrosoft size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-react text-4xl ">
+              <FaReact size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-java text-4xl ">
+              <FaJava size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-python text-4xl ">
+              <FaPython size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-js-square text-4xl ">
+              <FaJsSquare size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-microsoft text-4xl ">
+              <FaMicrosoft size={40} />
+            </i>
+          </div>
+
+          <div className="">
+            <i className="fab fa-react text-4xl ">
+              <FaReact size={40} />
+            </i>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="contact bg-blue-300 ml-56 mr-56 pt-5 mb-5 rounded-lg"
+        id="contact"
+      >
+        <div className="content">
+          <div className="title">
+            <span className="flex justify-center text-4xl text-bold text-black">
+              Contact Me
+            </span>
+          </div>
+          <div className="text ml-20 mr-20">
+            <div className="topic text-2xl flex justify-center mt-4 mb-7 underline ">
+              Have Any Project?
+            </div>
+            <p className="ml-60 mr-60 text-2xl font-bold">
+              Feel free to reach out if you have any questions, need assistance,
+              or are interested in collaborating. You can contact me directly
+              via the form below, or you can reach me through email or phone for
+              quicker responses. I look forward to hearing from you!
+            </p>
+            <div className="button flex justify-center">
+              <button className=" text-2xl bg-white p-3 rounded-lg mb-4 mt-7">
+                <a href="https://www.linkedin.com/in/riyajchaulagain/" />
+                Lets Chat
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

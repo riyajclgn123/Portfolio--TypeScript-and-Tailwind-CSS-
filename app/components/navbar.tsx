@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <>
     <nav>
-      <div className="navbar flex items-center justify-between w-full bg-blue-700">
+      <div className="navbar flex items-center justify-between w-full bg-gray-700">
        <div className="logo font-bold text-white text-3xl my-3 ml-5"><a href="#">Portfolio.</a></div>
          <ul className="menu flex justify-center">
           <li className="mx-9 text-white hover:text-black font-serif text-2xl"><a href="#home">Home</a></li>
